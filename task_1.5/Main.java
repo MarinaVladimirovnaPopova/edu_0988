@@ -14,6 +14,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int TC = scan.nextInt();
-        System.out.println(TC*9/5+ 32); // не выводит дробное число. менять тип переменной?
+        System.out.println(TC*9/5+ 32); // не выводит дробное число. менять тип переменной? Т. е. создать переменную TF для чисел с точкой, вычислить тут же и ее значение вывести?
     }
 }
