@@ -1,16 +1,29 @@
+/*Вывести на экран все возможные комбинации слов "Мама", "Мыла", "Раму".
+Каждую комбинацию вывести с новой строки. Слова не разделять.
+Пример:
+МылаРамуМама
+РамуМамаМыла
+...
+Требования:
+•	Программа должна выводить текст.
+•	Текст в каждой строке должен быть уникален.
+•	Должны быть выведены все возможные комбинации. */
+
 public class Main {
     public static void main(String[] args) {
-        String[] mama = {"Мама", "Мыла", "Раму"};
-        for(int i=0; i<=2; i++){
-            for(int j=0; i<=2; i++){
-                for(int k=0; i<=2; i++){
-                    String word = mama[i]+mama[j]+mama[k];
-                    if ([i] != [j], [i] != [k], [j] != [k]);
-                    System.out.println(""+word);
+        String[] words = {"Мама", "Мыла", "Раму"};
+        for (int i = 0; i <= 2; i++) {
+            for (int j = 0; j <= 2; j++) {
+                for (int k = 0; k <= 2; k++) {
+                    String word = words[i] + words[j] + words[k];
+                    {
+                        if (i != j && i != k && j != k)
+                            System.out.println(words[i] + words[j] + words[k]);
+                    }
+
                 }
             }
 
         }
-
     }
 }
