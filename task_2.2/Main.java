@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args){
         for(int i = 1; i <= 10; i++){
             for(int k = 1; k <= 10; k++){
-                System.out.print(k * i + "  "); // вывод без перевода строки
+                System.out.print(k * i + "\t"); // вывод без перевода строки
             }
             System.out.println(); // вывод с переводом строки значений после очередной итерации
         }
