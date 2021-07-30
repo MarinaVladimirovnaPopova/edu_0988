@@ -11,7 +11,7 @@ public class Main {
             for(int k = 1; k < 10; k++){
                 System.out.print(k * i + "  "); // вывод без перевода строки
             }
-            System.out.println(""); // вывод с переводом строки
+            System.out.println(""); // вывод с переводом строки значений после очередной итерации
         }
     }
 }
