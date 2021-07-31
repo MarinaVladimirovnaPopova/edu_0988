@@ -17,3 +17,16 @@ public class Main {
         System.out.println(TC*9/5+ 32); 
     }
 }
+
+
+/* Вариант №2 с кастованием
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int TC = scan.nextInt();
+        System.out.println((double)TC*9/5+ 32);
+    }
+}
+*/
