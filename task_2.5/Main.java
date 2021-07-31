@@ -9,10 +9,10 @@ public class Main {
         System.out.print( "веедите целое число: " );
         int a = scan.nextInt();
             if ( a == 10 ){
-                System.out.print( "Верно");
+                System.out.println( "Верно");
                 }
             else {
-                System.out.print( "Неверно");
+                System.out.println( "Неверно");
             }
 
     }
