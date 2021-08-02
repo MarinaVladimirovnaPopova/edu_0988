@@ -16,7 +16,7 @@ public class Main {
          for(int i=1; i<3; i++){
              if(minimum>nums[i]) minimum=nums[i];
         }
-        return minimum;//напишите тут ваш код
+        return minimum;
     }
 
     public static void main(String[] args) {
