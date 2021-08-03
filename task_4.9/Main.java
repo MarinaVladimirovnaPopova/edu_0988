@@ -1,4 +1,12 @@
-import java.util.Scanner;
+/*Исходный код с вебинара https://github.com/vladlen-vozhzhaev/edu_0988/tree/main/30.07.2021
+
+        Задача, доработать код с вебинара
+
+        Составить генеалогическое древо. У вас должно быть 2 бабушки, 2 дедушки, мама, папа, ребёнок.
+        Для всех персонажей должен корректно работать метод info()
+        На экран должно попасть максимум информации.
+        т.е. для ребенка нужно вывести инфо о родителях, а так же о бабушках и дедушках.*/
+
 
 public class Main {
     public static void main(String[] args) {
@@ -13,42 +21,46 @@ public class Main {
     }
 }
 
-class Person{ // Описание того, как должен выглядить человек
+class Person { // Описание того, как должен выглядить человек
     String name;
     String lastname;
     int age;
     Person mother;
-    Person father; 
-    Person(String name, String lastname, int age, Person mother, Person father){
+    Person father;
+
+    Person(String name, String lastname, int age, Person mother, Person father) {
         this.name = name;
         this.lastname = lastname;
         this.age = age;
         this.mother = mother;
         this.father = father;
     }
-    void info(){
-        String info = "Привет меня зовут "+this.name+" "+this.lastname+"\n" +
-                "Мне "+this.age+" лет \n";
 
-        if(this.mother != null){ // Проверка существования матери
-            info += "Мою маму зовут "+this.mother.name+"\n";
-            if(this.mother.father != null){ // Проверка существования отца матери (дедушки по маминой линии)
-                info += "Дедушку по маминой линии зовут "+this.mother.father.name+"\n";
-                if(this.mother.father != null){ // Проверка существования мамы матери (бабушка по маминой линии)
-                    info += "Бабушку по маминой линии зовут "+this.mother.mother.name+"\n";
+    void info() {
+        String info = "Привет меня зовут " + this.name + " " + this.lastname + "\n" +
+                "Мне " + this.age + " лет \n";
+
+        if (this.mother != null) { // Проверка существования матери
+            info += "Мою маму зовут " + this.mother.name + "\n";
+            if (this.mother.father != null) { // Проверка существования отца матери (дедушки по маминой линии)
+                info += "Дедушку по маминой линии зовут " + this.mother.father.name + "\n";
+                if (this.mother.father != null) { // Проверка существования мамы матери (бабушка по маминой линии)
+                    info += "Бабушку по маминой линии зовут " + this.mother.mother.name + "\n";
+                }
             }
+            if (this.father != null) {
+                info += "Моего папу зовут " + this.father.name+ "\n";
+                if (this.mother.father != null) { // Проверка существования отца папы  (дедушки по папиной линии)
+                    info += "Дедушку по папиной линии зовут " + this.father.father.name + "\n";
+                    if (this.mother.father != null) { // Проверка существования мамы отца (бабушка по папиной линии)
+                        info += "Бабушку по папиной линии зовут " + this.father.mother.name + "\n";
+                    }
+                    System.out.println(info);
+                }
+          }
         }
-        if(this.father != null){
-            info += "Моего папу зовут "+this.father.name;
-            if(this.mother.father != null){ // Проверка существования отца папы  (дедушки по папиной линии)
-                info += "Дедушку по папиной линии зовут "+this.father.father.name+"\n";
-                if(this.mother.father != null){ // Проверка существования мамы отца (бабушка по папиной линии)
-                    info += "Бабушку по папиной линии зовут "+this.father.mother.name+"\n";
-        }
-        System.out.println(info);
     }
-    void sayHi(String name){
-        System.out.println("Привет "+name);
+    void sayHi (String name){
+        System.out.println("Привет " + name);
     }
 }
-
