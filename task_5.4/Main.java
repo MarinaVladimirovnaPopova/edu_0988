@@ -21,9 +21,9 @@ public class Main {
         int  i = -1;
         while ((i = fin.read()) != -1) {
             char j = (char)i;
-            System.out.print(j);
+            System.out.print(j); // верно выводит
             nums.add(j);
         }
-        System.out.print(nums);
+        System.out.print(nums); //запятые выводит (
     }
 }
