@@ -46,7 +46,7 @@ public class Main {
             System.out.println("Получен ответ, наш ip: "+response);
             rd.close();
             FileOutputStream fos = new FileOutputStream("C://Users/Sergey/Desktop/java/good_ip.txt",true);
-            byte[] buffer = (ip+":"+port+"\n").getBytes();
+            byte[] buffer = (ip+"\t"+port+"\n").getBytes();
             fos.write(buffer);
             fos.close();
 
